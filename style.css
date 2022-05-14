@@ -10,27 +10,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #dcdcdc;
 }
 
 .slider {
   width: min-content;
-  margin: 50px auto;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  margin: 3.125rem auto;
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75); */
 }
 
 .slider input[name="switch"] {
   display: none;
 }
 
+.switch {
+  width: 30%;
+  text-align: end;
+}
+
 .switch label {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 0.875rem;
+  height: 0.875rem;
   cursor: pointer;
-  margin: 0 3px;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+  margin: 0 0.313rem;
+  box-shadow: 0 0 0.125rem 0 rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  border: 5px solid #2f363c;
+  border: 0.375rem solid #2f363c;
   background-color: #738290;
 }
 
@@ -68,16 +74,18 @@ body {
 .control-slider {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  margin-top: 2rem;
 }
 
 .wrapper-slider-text {
-  max-width: 14rem;
-  width: 100%;
+  width: 70%;
   overflow: hidden;
 }
 
 .slider-text {
   display: flex;
+  align-items: center;
   width: 400%;
   transition: transform 0.5s ease-in-out;
 }
