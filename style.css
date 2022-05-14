@@ -15,8 +15,6 @@ body {
 
 .slider {
   width: min-content;
-  margin: 3.125rem auto;
-  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75); */
 }
 
 .slider input[name="switch"] {
@@ -81,7 +79,7 @@ body {
 
 .slides img {
   width: 47.223vw;
-  height: 40vh;
+  height: 50vh;
 }
 
 .control-slider {
@@ -138,4 +136,68 @@ body {
 
 #btn4:checked ~ .control-slider .wrapper-slider-text .slider-text {
   transform: translateX(-75%);
+}
+
+/* Media */
+@media screen and (max-width: 1400px) {
+  .wrapper-slider-text,
+  .switch {
+    width: 50%;
+  }
+
+  .slides img {
+    height: 35vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .control-slider {
+    flex-wrap: wrap;
+  }
+
+  .wrapper-slider-text {
+    width: 100%;
+  }
+
+  .switch {
+    width: 100%;
+    order: -1;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .switch label {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0 0.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slides img {
+    width: 90vw;
+    height: 45vh;
+  }
+
+  #btn2:checked ~ .slider-inner .slides {
+    transform: translate(-90vw);
+  }
+
+  #btn3:checked ~ .slider-inner .slides {
+    transform: translate(-180vw);
+  }
+
+  #btn4:checked ~ .slider-inner .slides {
+    transform: translate(-270vw);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .slides img {
+    height: 30vh;
+  }
+
+  .item-text {
+    font-size: 1rem;
+  }
 }
